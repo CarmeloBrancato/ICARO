@@ -3,7 +3,7 @@
 #              		ICARO - The software extracts the e-mail headers in a sequential and automatic way	V.1.0				                              #   	   
 #				      														                                                                                                      #
 #																		                                                                                                            #
-#					    DICATED TO MY FAMILY AND MY GIRLFRIEND							                                                                             	#
+#					      DEDICATED TO MY FAMILY AND MY GIRLFRIEND							                                                                             	#
 #                              					  		   								                                                                                # 
 # 	(C) Copyright 2018-2100 by CARMELO BRANCATO									  	  		                                                                      # 
 #													                  			                                                                                              # 
