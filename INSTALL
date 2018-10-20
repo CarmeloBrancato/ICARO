@@ -1,0 +1,72 @@
+#################################################################################################################################################
+#                          							   					  			#
+#              		ICARO - The software extracts the e-mail headers in a sequential and automatic way	V.1.0				#   	   
+#				      														#
+#																		#
+#					  DEDICATED TO MY FAMILY AND MY GIRLFRIEND								#
+#                              					  		   								# 
+# 	(C) Copyright 2018-2100 by CARMELO BRANCATO									  	  		# 
+#													                  			# 
+# 		E-mail :            carmelobrancato@libero.it							  				# 
+#															  			# 
+#    Fingerpring sign gpg: F105A87E                    									  			# 
+#										   								#
+#  															   			#	  
+#																		#
+#    This program is free software: you can redistribute it and/or modify 									#
+#																		#
+#   it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or	#
+#																		#
+#    (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 		#
+#																		#
+#   without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 							#
+#     																		#
+#    See the GNU General Public License for more details.											#
+#																		#
+#    You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.	#
+#################################################################################################################################################
+
+Icaro does not require any installation.
+
+Once you have downloaded the icaro.sh file locally, type the command chmod 755 icaro.sh to provide the software with execute, read, and write permissions.
+
+After assigning the permissions, open the software with nano editor and proceed to the configuration described in the comments.
+
+You must enter the destination path for creating the Releases, and save the configuration.
+
+To start the software you must use the command ./icaro.sh and you get the list of commands:
+
+(start|estrazione|localizza_ip|traccia_percorso|compressione|applica_firma_digitale|verifica_firma|crea_iso|verifica_iso|rimozione_dati|decompressione).
+
+Type ./icaro.sh start, and proceed to the procedure of creating the Reperti directory, original e-mail copies and e-mails, the e-mails to be analyzed in the original e-mail directory will be moved
+
+, and a backup copy of the e -mail and will be stored in the copies_email directory.
+
+After that the REPORT_ESTRAZIONE_HEADERS_EMAIL_DEL_SOSPETTATO.txt file will be created, to record all the extraction operations for analysis.
+
+Soon after checksum of the original e-mails is made, and a log is created with the checksum values ??for data consistency, and the file REPORT_ESTRAZIONE_HEADERS_EMAIL_DEL_SOSPETTATO.txt is updated consecutively.
+
+By typing the ./icaro.sh estrazione command, the e-mail header extraction procedure is started, with the creation of the Reperti_IP files. Consecutively, the Log Checksum is created for the extraction of each extracted file, and the REPORT_ESTRAZIONE_HEADERS_EMAIL_DEL_SOSPETTATO.txt file is updated.
+
+Typing the command ./icaro.sh localizza_ip, the procedure of whois on the Reperti_IP files is started, and the IP to which Internet Service Provider belongs or which company it belongs to will be checked, and at the same time the geographic position from which datacenter was identified is identified sent the e-mail.
+
+For each whois operation, a checksum is made simultaneously with the creation of the Log for data consistency. The REPORT_ESTRAZIONE_HEADERS_EMAIL_DEL_SOSPETTATO.txt file is updated
+
+By typing the command ./icaro.sh traccia_percorso, track the path that made the email to get on the PC of the potential victim. At the same time a Log is created with the checksum for data consistency, and the file is updated and the file REPORT_ESTRAZIONE_HEADERS_EMAIL_DEL_SOSPETTATO.txt is updated
+
+By typing the compressione command ./icaro.sh, the Reperto directory is compressed into tar.bz2, and the Repository List is created at the same time.
+
+At the same time the Log is created with the checksum for data consistency.
+
+By typing the command ./icaro.sh applica_firma_digitale, the GPG digital signature is applied to the Directory Reperti.tar.bz2, to the Repertoire List, and to the Checksum Logs. This is because it must be signed to maintain the Chain of Custody.
+
+By typing the command ./icaro_sh verifica_firma, you can check which signature has been applied to the compressed directory.
+
+Typing the ./icaro.sh crea_iso command creates an iso image of the Directory Reperti.tar.bz2, and includes the Checksum logs and the List of finds.
+
+By typing the command ./are decompressione, you can unzip the Reperti.tar.bz2. This can be useful to the Computer Forensics expert, in case he has to check the findings again.
+
+By typing the command ./icaro verifica_iso, you can temporarily check and mount the image you created, to see which files were created in the image. At the same time, the temporary directory is unmounted.
+
+By typing the command ./icaro rimozione_dati, you can remove all the extracted data, deleting the Reperti directory.
+
